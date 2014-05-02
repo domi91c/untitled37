@@ -1,4 +1,5 @@
 
+
 <body>
 <!-- Container starts here -->
 <div id="container" >
@@ -7,7 +8,7 @@
     </div>
     <div class="navbar" >
       <hr>
-      <a href="index.html"><li>Home</li></a>
+      <li><%=link_to "Home Link", @Home%></li>
       <hr>
       <A href="buysell.html" /><li>Buy/Sell</li></a>
       <hr>
@@ -44,6 +45,7 @@
         <div class="searchinput" >
           <input type="text" placeholder="Search by Name, Category, ISBN..."class="searchbox" >
 
+          </input>
         </div>
         <div class="searchbtn" >
         </div>
@@ -125,7 +127,7 @@
           <div class="buybottom" >
             <div class="buyblock" >
               <div class="buyframe" >
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScBCUMyc89b_t755Zb32namYBfb9CJSLm_TDc8g7WyYVLm7nmV" height="150" width="180"/>
+                <img src="" height="150" width="180"/>
               </div>
               <div class="buyinfo" >
                 <h2> <%= ad.title %> </h2>
@@ -143,11 +145,13 @@
             </tbody>
             <hr>
 
-    <% end %>
+      <% end %>
       </div>
 
       <div class="buymorebar"	>
-        <%= link_to 'New Ad', new_ad_path %>
+        <h1> Testing Text </h1>
+        <hr>
+        <h1> <%= link_to 'New Ad', new_ad_path %> </h1>
 
       </div>
     </div>
@@ -199,5 +203,6 @@
 </div>
 <!-- Main container ends here -->
 </body>
+</html>
 
 
