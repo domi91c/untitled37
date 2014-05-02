@@ -1,0 +1,203 @@
+
+<body>
+<!-- Container starts here -->
+<div id="container" >
+  <div id="welcome_header" >
+    <div class="logobox" >
+    </div>
+    <div class="navbar" >
+      <hr>
+      <a href="index.html"><li>Home</li></a>
+      <hr>
+      <A href="buysell.html" /><li>Buy/Sell</li></a>
+      <hr>
+      <li>Blog</li>
+      <hr>
+      <li>Notes</li>
+      <hr>
+      <li>Help</li>
+      <hr>
+      <li>Settings</li>
+      <hr>
+      <div class="loginbar" >
+        <div class="loginbutton" >
+        </div>
+        <div class="loginbutton" >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="buytop" >
+    <div class="searchbar" >
+      <div class="sortbar">
+        <div class="sortbtn" >
+          <select class="sortselect">
+            <option>Select</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>With picture</option>
+            <option>Without picture</option>
+          </select>
+        </div>
+      </div>
+      <div class="searchcont" >
+        <div class="searchinput" >
+          <input type="text" placeholder="Search by Name, Category, ISBN..."class="searchbox" >
+
+        </div>
+        <div class="searchbtn" >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="buymain" >
+    <div class="buyside" >
+      <div class="sidetop" >
+      </div>
+      <div class="sidebox" >
+        <li>What are you looking for:</li>
+        <select>
+          <option>Select</option>
+          <option>Books</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="sidebox" >
+        <li>Title:</li>
+        <input type="text" placeholder="" />
+      </div>
+      <div class="sidebox" >
+        <li>ISBN:</li>
+        <input type="text" />
+      </div>
+      <div class="sidebox" >
+        <li>Category:</li>
+        <select>
+          <option>Select</option>
+          <option>Electronics</option>
+          <option>Furniture</option>
+          <option>Clothing</option>
+        </select>
+      </div>
+      <div class="sidebox" >
+        <li>School:</li>
+        <select>
+          <option>Select</option>
+        </select>
+      </div>
+      <div class="sidebox" >
+        <li>Course:</li>
+        <select>
+          <option>Select</option>
+        </select>
+      </div>
+      <div class="sidebox" >
+        <li>Condition:</li>
+        <select>
+          <option>Select</option>
+        </select>
+      </div>
+    </div>
+    <div class="buycont" >
+      <div class="buytop" >
+        <div class="buybtn" >
+        </div>
+        <div class="buybtn" >
+        </div>
+      </div>
+      <div class="buychoices" >
+        <div class="choiceblock" >
+          <hr>
+          <div class="buychoicebtn" >
+          </div>
+          <li>Books</li>
+          <hr>
+          <div class="buychoicebtn" >
+          </div>
+          <li>Humber College</li>
+          <hr>
+
+        </div>
+      </div>
+
+      <% @ads.each do |ad| %>
+
+          <div class="buybottom" >
+            <div class="buyblock" >
+              <div class="buyframe" >
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScBCUMyc89b_t755Zb32namYBfb9CJSLm_TDc8g7WyYVLm7nmV" height="150" width="180"/>
+              </div>
+              <div class="buyinfo" >
+                <h2> <%= ad.title %> </h2>
+                <h3> <%= ad.description %> </h3>
+
+              </div>
+            </div>
+            <tbody>
+            <tr>
+
+              <td style="font-size: 10"><%= link_to 'Show', ad %> </td>
+              <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
+              <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            </tbody>
+            <hr>
+
+    <% end %>
+      </div>
+
+      <div class="buymorebar"	>
+        <%= link_to 'New Ad', new_ad_path %>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer starts here -->
+  <div id="footer">
+    <div class="footbox" >
+      <div class="foot_top" >
+        <div class="foot_strip" >
+          <li style="font-weight:bold;color:black;margin-bottom:5px;">Current Schools</li>
+          <li>Humber College</li>
+          <li>Western University</li>
+          <li>Brock University</li>
+          <li>Seneca College</li>
+          <li>York University</li>
+          <li>Uoft University</li>
+        </div>
+        <div class="foot_strip" >
+          <li style="font-weight:bold;color:black;margin-bottom:5px;">Pages</li>
+          <li>Home</li>
+          <li>Buy/Sell</li>
+          <li>Blog</li>
+          <li>Help</li>
+          <li>Settings</li>
+        </div>
+        <div class="foot_strip" >
+          <li style="font-weight:bold;color:black;margin-bottom:5px;">About Us</li>
+          <li>Our Team</li>
+          <li>About</li>
+          <li>Terms</li>
+          <li>Privacy</li>
+        </div>
+        <div class="foot_strip" >
+          <li style="font-weight:bold;color:black;margin-bottom:5px;">Courses</li>
+          <li>Science</li>
+          <li>Math</li>
+          <li>Engineering</li>
+          <li>English</li>
+          <li>Econmics</li>
+        </div>
+      </div>
+      <div class="foot_bottom" >
+      </div>
+    </div>
+
+  </div>
+  <!-- Footer ends here -->
+</div>
+<!-- Main container ends here -->
+</body>
+
+
