@@ -127,8 +127,7 @@
           <div class="buybottom" >
             <div class="buyblock" >
               <div class="buyframe" >
-                <img src="<%= image_tag(ad.image_url, class: 'list_image') %>
-" height="150" width="180"/>
+                <%= image_tag(ad.image_url, size: "160x160") %>
               </div>
 
               <div class="buyinfo" >
@@ -139,6 +138,7 @@
             </div>
             <tbody>
             <tr>
+
 
               <td style="font-size: 10"><%= link_to 'Show', ad %> </td>
               <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
